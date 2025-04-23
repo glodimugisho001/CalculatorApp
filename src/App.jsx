@@ -1,15 +1,10 @@
-import React, { useState, useRef, useEffect } from "react"; 
+import React, { useState, useRef } from "react"; 
 import "./App.css"; 
  
 function App() { 
   const inputRef = useRef(null); 
   const resultRef = useRef(null); 
-  const pref= useRef(null)
   const [result, setResult] = useState(0); 
-  
-  useEffect(() => {
-    console.log("Texte du paragraphe :", pref.current.textContent);
-  }, []);
  
   function plus(e) { 
     e.preventDefault(); 
@@ -70,7 +65,6 @@ function App() {
         <button onClick={resetInput}>reset input</button> 
         <button onClick={resetResult}>reset result</button> 
       </form> 
-      <p ref={pref}>salur les gars</p>
     </div> 
     
   ); 
